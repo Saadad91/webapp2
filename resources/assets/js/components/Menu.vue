@@ -67,6 +67,14 @@ export default {
           text : 'Usuario',
           icon : 'fa-user-circle',
           route :'/Usuarios'
+        },{
+            text : 'Eventos FC',
+            icon : 'fa-calendar',
+            route: '/eventos/fc'
+        },{
+            text : 'Eventos VC',
+            icon : 'fa-calendar',
+            route: '/eventos'
         }
         ]
       }

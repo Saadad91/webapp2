@@ -71,8 +71,19 @@ export default {
         submit(){
             const me = this;
             const form = me.$refs.form;
+            let data = formSerialize(form, {hash: true});
 
-            console.log(formSerialize(form, {hash: true}));
+            axiosForm('/cliente', data, {
+                method: 'POST'
+            })
+            .then( (response) => {
+                // if(response.data.success){
+                    me.$awn.success(response.data.msg);
+                    me.$router.push('/cliente');
+                // }
+                console.log(response);
+            })
+            .catch( (error) => console.log(error));
 
             console.log('submiting form....');
         }

@@ -6,6 +6,9 @@ import Calendario from './components/pages/Calendario/Calendario';
 import ListaCliente from './components/pages/cliente/Listar';
 import ListarUsuario from './components/pages/Usuarios/Listar';
 import ListarEdad from './components/pages/Edad/Listar';
+import Eventos from './components/pages/eventos/Eventos.vue';
+import ListarEventos from './components/pages/eventos/Listar.vue';
+import ListarEventosFC from './components/pages/eventos/ListarFC.vue';
 
 import CrearCliente from './components/pages/cliente/Crear';
 import CrearUsuario from './components/pages/Usuarios/Crear';
@@ -60,5 +63,15 @@ export default [
                     path: 'crear',
                     component: CrearEdad
                 }]
+                },{
+                    path : '/eventos',
+                    component : Eventos,
+                    children: [{
+                        path: '/',
+                        component: ListarEventos
+                    },{
+                        path: 'fc',
+                        component: ListarEventosFC
+                    }]
                 }
 ];

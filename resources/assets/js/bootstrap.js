@@ -22,6 +22,7 @@ try {
 
 window.axios = require('axios');
 window.formSerialize = require('form-serialize');
+window.axiosForm = require('./utils/axiosForm');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

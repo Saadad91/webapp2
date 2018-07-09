@@ -22,4 +22,20 @@ class ClienteController extends Controller
 
         return ClienteResource::collection($datos);
     }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+
+        try {
+            Cliente::create($data);
+
+            return [
+                'sucess' => true,
+                'msg' => 'Registro guardado con éxito!'
+            ];
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
 }

@@ -9,6 +9,15 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import 'vue-event-calendar/dist/style.css'
+import vueEventCalendar from 'vue-event-calendar'
+Vue.use(vueEventCalendar, {locale: 'es'})
+
+import FullCalendar from 'vue-full-calendar'
+Vue.use(FullCalendar)
+
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -18,9 +27,9 @@ window.Vue = require('vue');
 import App from './components/App.vue';
 import VueRouter from 'vue-router';
 import routes from './routes.js';
-import 'vue-event-calendar/dist/style.css';
-import vueEventCalendar from 'vue-event-calendar';
-Vue.use(vueEventCalendar, {locale: 'en'});
+import VueAWN from "vue-awesome-notifications";
+
+Vue.use(VueAWN)
 
 
 Vue.use(VueRouter);

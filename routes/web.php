@@ -18,7 +18,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resources(['cliente' => 'ClienteController']);
 Route::resources(['Usuarios' => 'UsuarioController']);
-Route::resources(['Edad' => 'EdadController']);
+Route::resources(['Edad' => 'EdadController',
+'eventos' => 'EventosController']);
 
 
 Route::get('/Usuarios', 'UsuarioController@index');

@@ -15,7 +15,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for-key="cliente in clientes">
+                        <tr v-for="cliente in clientes">
                             <td>{{cliente.nombres}}</td>
                             <td>{{cliente.email}}</td>
                             <td>{{cliente.telefono}}</td>
